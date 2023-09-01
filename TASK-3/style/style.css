@@ -6,30 +6,18 @@ h1{
     height: 100px;
     background-color: red;
     margin-bottom: 20px;
+    transition: 3s all;
 }
 .box-2{
     width: 100px;
     height: 100px;
     background-color: blue;
+    transition: 3s all;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 .box-1:hover, .box-1:hover ~ .box-2 {
-    animation-name: width;
-    animation-timing-function: ease-in;
-    animation-duration: 4s;
-    animation-delay: calc(0.7s * var(--i));
-    animation-fill-mode: both;
+    width: 500px;
 }
 
-@keyframes width {
-    0%{
-        width: 100px;
-    }
-
-    50%{
-        width: 500px;
-    }
-    100%{
-        width: 100px;
-    }
-}
