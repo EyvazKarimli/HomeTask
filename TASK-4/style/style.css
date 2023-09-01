@@ -1,62 +1,76 @@
 p:first-of-type{
     margin-top: 50px;
 }
-
 .container{
     width: 600px;
-    height: 250px;
-    background-color: antiquewhite;
+    height: 500px;
     position: relative;
     left: 40%;
 }
-
 .content{
     width: 400px;
-    height: 250px;
-    background-color: bisque;
+    height: 400px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    >p{
+        text-align: center;
+        margin-top: 200px;
+        font-size: 30px;
+    }
 }
-
-
 
 .box-1{
     position: absolute;
     width: 200px;
-    height: 125px;
+    height: 200px;
     background-color: red;
     left: 0;
     top: 0;
-    transition: 1s all;
+    transition:1s all;
+    transform-origin: top left;
 }
 .box-2{
     position: absolute;
     width: 200px;
-    height: 125px;
+    height: 200px;
     background-color: yellow;
     left: 50%;
     top: 0%;
+    transition:1s all;
+    transform-origin: top right;
 }
 .box-3{
     position: absolute;
     width: 200px;
-    height: 125px;
+    height: 200px;
     background-color: blue;
     left: 0;
     top: 50%;
+    transition:1s all;
+    transform-origin: bottom left;
+    z-index: 1;
 }
 .box-4{
     position: absolute;
     width: 200px;
-    height: 125px;
+    height: 200px;
     background-color: darkgreen;
     left: 50%;
     top: 50%;
+    transition:1s all;
+    transform-origin: bottom right;
+    z-index: 1;
 }
-
-
-.content:hover .box-1{
-    transform: rotate(180deg);
-    transform-origin: top right;
+.content:hover .box-1, .box{
+    transform: rotate(90deg);
+}
+.content:hover .box-2{
+    transform: rotate(-90deg);
+}
+.content:hover .box-3{
+    transform: rotate(-90deg);
+}
+.content:hover .box-4{
+    transform: rotate(90deg);
 }
