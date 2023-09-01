@@ -1,0 +1,68 @@
+.main{
+    width: 100%;
+    height: 700px;
+    background-color: aqua;
+    position: relative;
+}
+
+a{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: white;
+    border:1px solid grey;
+    position: absolute;
+    top: 90%;
+    left: 20px;
+}
+
+
+.red{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+}
+
+.darkgreen{
+    width: 300px;
+    height: 300px;
+    background-color: darkgreen;
+    position: absolute;
+    top: 5%;
+    left: 43%;
+}
+
+.blue{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+}
+
+button{
+    padding: 5px 10px;
+    position: relative;
+    left: 20px;
+    top: 90%;
+}
+
+.main button:focus ~ div{
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-delay: calc(0.5s * var(--i));
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
