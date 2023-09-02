@@ -1,0 +1,62 @@
+h1{
+    color: darkgreen;
+}
+
+h1, p {
+    margin: 20px;
+}
+
+.text{
+    font-size: 30px;
+    padding: 20px 30px;
+    width: 250px;
+    height: 80px;
+    margin: 30px;
+    border: 2px solid black;
+    text-align: center;
+    transform: skew(-20deg);
+}
+
+.text span{
+    display: inline-block;
+    transform: skew(20deg);
+}
+
+.text:hover{
+    animation: shake 0.3s;
+    cursor: pointer;
+    border-color: darkgreen;
+    >span{
+        color: darkgreen;
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: skew(-20deg);
+    }
+    15%{
+        transform: skew(0deg);
+    }
+    30%{
+        transform: skew(20deg);
+    }
+    45%{
+        transform: skew(0deg);
+    }
+    60%{
+        transform: skew(-20deg);
+    }
+    75%{
+        transform: skew(0deg);
+    }
+    80%{
+        transform: skew(20deg);
+    }
+    95%{
+        transform: skew(0deg);
+    }
+    100%{
+        transform: skew(-20deg);
+    }
+}
