@@ -16,6 +16,9 @@ p {
         height: 100%;
         background-color: blue;
     }
+    &:hover .box-2{
+        width: 80%;
+    }
 }
 
 .box-1{
@@ -37,9 +40,8 @@ p {
     }
 }
 .box-2{
-    animation: 4s widthChange;
-    animation-timing-function: steps(2);
-    animation-iteration-count: infinite;
+    transition-timing-function: steps(2);
+    transition: width 2s ;
 }
 
 
