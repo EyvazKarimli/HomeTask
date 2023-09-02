@@ -1,0 +1,45 @@
+p {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.container{
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 500px;
+    height: 70px;
+    border: 1px solid black;
+    >div{
+        width: 150px;
+        height: 100%;
+        background-color: blue;
+    }
+}
+
+.box-1{
+    animation: 4s widthChange cubic-bezier(.4,.76,.83,-0.02);
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes widthChange{
+    0% {
+        width: 150px;
+    }
+    50%{
+        width: 350px;
+    }
+
+    100% {
+        width: 150px;
+    }
+}
+.box-2{
+    animation: 4s widthChange;
+    animation-timing-function: steps(2);
+    animation-iteration-count: infinite;
+}
+
+
