@@ -1,0 +1,16 @@
+.content{
+    width: 400px;
+    height: 450px;
+    padding: 15px;
+    margin: 20px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s border-radius;
+    &:hover{
+        cursor: pointer;
+        background-color: plum;
+        color: black;
+        border-radius: 0;
+    }
+}
