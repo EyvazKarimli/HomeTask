@@ -1,0 +1,44 @@
+h1, h2{
+    text-align: center;
+    color: darkgreen;
+    margin-top: 30px;
+}
+h1{
+    margin-bottom: 100px;
+}
+
+.content{
+    width: 20%;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    >.box{
+        width: 30%;
+        height: 100%;
+        background-color: #357ccf;
+        animation: rotate 3s;
+        animation-delay: calc(0.1s * var(--i));
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(90deg);
+        background: rgb(68,146,238);
+        background: linear-gradient(90deg, rgba(68,146,238,1) 20%, rgba(113,166,227,1) 40%, rgba(135,178,227,1) 60%, rgba(154,191,234,1) 80%, rgba(185,213,247,1) 97%);
+    }
+    100%{
+        transform: rotate(-90deg);
+        background-color: #357ccf;
+    }
+}
